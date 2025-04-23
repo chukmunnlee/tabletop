@@ -1,0 +1,26 @@
+apiVersion: table/v1
+kind: Table
+metadata:
+  id: 01JS8VYXEKHH54D5HQCSEC3KCT
+  name: StandardTable
+  description: Stadard playing card table
+
+spec:
+  image: images/green_felt.jpg
+  decks:
+  - name: standard52deck
+    deckId: 01ha1dabwkf58aafmddnsm7qw8
+    url: http://localhost:3000/api
+    presets:
+      count: 3
+      shuffle: true
+
+  piles:
+  - name: pile_0
+    content: standard52deck.pile_0
+    actions:
+    - draw
+  - name: discarded
+    content: standard52deck.discarded
+    
+
